@@ -19,6 +19,14 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+    macosArm64 {
+        compilations.named("main") {
+            cinterops {
+                val rust by creating
+            }
+        }
+    }
+    macosX64()
     linuxX64()
 
     sourceSets {
