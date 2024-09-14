@@ -1,6 +1,7 @@
 *.dll
 *.hprof
 *.iml
+*.klib
 *.xccheckout
 *.xcscmblueprint
 .DS_Store
