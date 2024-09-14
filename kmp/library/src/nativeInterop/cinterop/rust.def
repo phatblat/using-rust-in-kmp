@@ -1,0 +1,7 @@
+package = rust
+
+# Path relative to cinterop working directory (repo root)
+headers = rust.h
+
+compilerOpts = -I rust/
+linkerOpts = -L . -l rust

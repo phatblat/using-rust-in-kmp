@@ -19,3 +19,10 @@ build:
     kmp/gradlew --quiet \
         --project-dir kmp/ \
         assemble
+
+# ~/.konan/kotlin-native-prebuilt-macos-aarch64-2.0.0/bin/cinterop
+interop:
+    cinterop \
+        -def kmp/library/src/nativeInterop/cinterop/rust.def \
+        -output rust \
+        -verbose
