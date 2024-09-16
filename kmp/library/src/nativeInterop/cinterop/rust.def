@@ -1,6 +1,0 @@
-package = rust
-
-headers = rust.h
-
-compilerOpts = -I ../../rust
-linkerOpts = -L ../rust/target/debug -l rust
