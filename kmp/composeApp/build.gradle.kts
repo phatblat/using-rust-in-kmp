@@ -1,5 +1,7 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -9,21 +11,35 @@ plugins {
 }
 
 kotlin {
-    androidTarget {
+    val androidTarget: KotlinAndroidTarget = androidTarget()
+    androidTarget.apply {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
 
-    listOf(
-        iosX64(),
+    val iosTargets: List<KotlinNativeTarget> = listOf(
+//        iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
+//        iosSimulatorArm64()
+    )
+    iosTargets.forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+        }
+    }
+
+    // Can't do iosTargets.plus(androidTarget)
+
+    iosTargets.forEach { target ->
+        target.apply {
+            compilations.named("main") {
+                cinterops {
+                    val rust by creating
+                }
+            }
         }
     }
 
@@ -41,6 +57,11 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+        }
+        commonTest {
+            dependencies {
+                implementation(libs.kotlin.test)
+            }
         }
     }
 }
