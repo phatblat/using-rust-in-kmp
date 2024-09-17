@@ -24,6 +24,10 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding()
     }
+
+    func add() {
+        Platform_iosKt.add(a: 1, b: 2)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

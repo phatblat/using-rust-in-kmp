@@ -33,15 +33,20 @@ kotlin {
             baseName = "Shared"
             isStatic = true
         }
-    }
-
-    val nativeTargets = iosTargets
-    nativeTargets.forEach { target ->
-        target.compilations.named("main") {
+        iosTarget.compilations.named("main") {
             cinterops {
                 val rust by creating
             }
         }
+    }
+
+    val nativeTargets = iosTargets
+    nativeTargets.forEach { target ->
+//        target.compilations.named("main") {
+//            cinterops {
+//                val rust by creating
+//            }
+//        }
     }
 
     sourceSets {
