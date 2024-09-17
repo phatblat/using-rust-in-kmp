@@ -16,40 +16,12 @@ kotlin {
         }
     }
 
-    val androidNativeTargets = listOf(
-        androidNativeArm64(),   // arm64-v8a
-//        androidNativeArm32(),   // armeabi-v7a
-//        androidNativeX64(),     // x86_64
-//        androidNativeX86(),     // x86 32-bit
-    )
-
-    val iosTargets = listOf(
-        iosSimulatorArm64(),
-//        iosX64(),
-//        iosArm64(),
-    )
-
-    iosTargets.forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
-        }
-    }
-
-    val nativeTargets = androidNativeTargets + iosTargets
-    nativeTargets.forEach { target ->
-        target.compilations.named("main") {
-            cinterops {
-                val rust by creating
-            }
-        }
-    }
-
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-            // duplicated
+        }
+        commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -58,18 +30,8 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(projects.shared)
         }
-        iosMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
-        }
-        commonMain.dependencies {}
         commonTest {
             dependencies {
                 implementation(libs.kotlin.test)

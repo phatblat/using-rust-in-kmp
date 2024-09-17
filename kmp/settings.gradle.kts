@@ -1,3 +1,5 @@
+rootProject.name = "rust-in-kmp"
+
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -27,5 +29,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "rust-in-kmp"
 include(":composeApp")
+include(":shared")
