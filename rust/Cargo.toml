@@ -8,4 +8,7 @@ edition = "2024"
 [lib]
 crate-type = ["staticlib"]
 
+[build]
+rustflags = ["-C", "link-arg=-Wl,--ranlib"]
+
 [dependencies]
