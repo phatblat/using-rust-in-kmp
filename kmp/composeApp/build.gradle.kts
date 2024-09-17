@@ -1,7 +1,5 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -11,19 +9,26 @@ plugins {
 }
 
 kotlin {
-    val androidTarget: KotlinAndroidTarget = androidTarget()
-    androidTarget.apply {
+    androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
 
-    val iosTargets: List<KotlinNativeTarget> = listOf(
+    val androidNativeTargets = listOf(
+        androidNativeArm64(),   // arm64-v8a
+//        androidNativeArm32(),   // armeabi-v7a
+//        androidNativeX64(),     // x86_64
+//        androidNativeX86(),     // x86 32-bit
+    )
+
+    val iosTargets = listOf(
+        iosSimulatorArm64(),
 //        iosX64(),
 //        iosArm64(),
-        iosSimulatorArm64(),
     )
+
     iosTargets.forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
@@ -31,14 +36,11 @@ kotlin {
         }
     }
 
-    // Can't do iosTargets.plus(androidTarget)
-
-    iosTargets.forEach { target ->
-        target.apply {
-            compilations.named("main") {
-                cinterops {
-                    val rust by creating
-                }
+    val nativeTargets = androidNativeTargets + iosTargets
+    nativeTargets.forEach { target ->
+        target.compilations.named("main") {
+            cinterops {
+                val rust by creating
             }
         }
     }
@@ -47,8 +49,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-        }
-        commonMain.dependencies {
+            // duplicated
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -58,6 +59,17 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
         }
+        iosMain.dependencies {
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
+            implementation(libs.androidx.lifecycle.viewmodel)
+            implementation(libs.androidx.lifecycle.runtime.compose)
+        }
+        commonMain.dependencies {}
         commonTest {
             dependencies {
                 implementation(libs.kotlin.test)
