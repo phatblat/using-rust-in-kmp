@@ -21,8 +21,8 @@ kotlin {
 
     val iosTargets: List<KotlinNativeTarget> = listOf(
 //        iosX64(),
-        iosArm64(),
-//        iosSimulatorArm64()
+//        iosArm64(),
+        iosSimulatorArm64(),
     )
     iosTargets.forEach { iosTarget ->
         iosTarget.binaries.framework {
