@@ -1,4 +1,4 @@
-targets := "aarch64-apple-ios aarch64-apple-ios-sim"
+targets := "aarch64-apple-ios aarch64-apple-ios-sim aarch64-linux-android armv7-linux-androideabi"
 
 default:
     @just --list
