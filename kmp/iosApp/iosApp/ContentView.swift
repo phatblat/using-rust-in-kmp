@@ -26,7 +26,7 @@ struct ContentView: View {
     }
 
     func add() {
-        Platform_iosKt.add(a: 1, b: 2)
+        Calc_iosKt.add(a: 1, b: 2)
     }
 }
 
