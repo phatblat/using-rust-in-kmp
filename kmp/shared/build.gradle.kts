@@ -67,7 +67,9 @@ android {
     }
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
-        ndk {}
+        ndk {
+            abiFilters.add("arm64-v8a")
+        }
     }
 
     ndkVersion = "27.1.12297006"
