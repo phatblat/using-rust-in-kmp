@@ -9,4 +9,3 @@ add_library(
 )
 
 include_directories( ../../rust )
-
