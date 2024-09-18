@@ -1,5 +1,12 @@
+targets := "aarch64-apple-ios aarch64-apple-ios-sim"
+
 default:
     @just --list
+
+install-targets:
+    for target in {{targets}}; do \
+        rustup target add {{targets}}; \
+    done
 
 clean:
     cargo clean \
