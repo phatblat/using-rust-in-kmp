@@ -14,18 +14,25 @@ kotlin {
         }
     }
 
-
-//    val androidNativeTargets = listOf(
-//        androidNativeArm64(),   // arm64-v8a
-////        androidNativeArm32(),   // armeabi-v7a
-////        androidNativeX64(),     // x86_64
-////        androidNativeX86(),     // x86 32-bit
-//    )
+    val androidNativeTargets = listOf(
+        androidNativeArm64(),   // arm64-v8a
+        // arm32 fails with linker errors
+//        androidNativeArm32(),   // armeabi-v7a
+//        androidNativeX64(),     // x86_64
+//        androidNativeX86(),     // x86 32-bit
+    )
+    androidNativeTargets.forEach { target ->
+        target.binaries {
+            sharedLib {
+                baseName = "shared"
+            }
+        }
+    }
 
     val iosTargets = listOf(
+        iosArm64(),
         iosSimulatorArm64(),
-//        iosX64(),
-//        iosArm64(),
+        iosX64(),
     )
 
     iosTargets.forEach { iosTarget ->
@@ -33,20 +40,15 @@ kotlin {
             baseName = "Shared"
             isStatic = true
         }
-        iosTarget.compilations.named("main") {
+    }
+
+    val nativeTargets = iosTargets + androidNativeTargets
+    nativeTargets.forEach { target ->
+        target.compilations.named("main") {
             cinterops {
                 val rust by creating
             }
         }
-    }
-
-    val nativeTargets = iosTargets
-    nativeTargets.forEach { target ->
-//        target.compilations.named("main") {
-//            cinterops {
-//                val rust by creating
-//            }
-//        }
     }
 
     sourceSets {

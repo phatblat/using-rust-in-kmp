@@ -2,5 +2,12 @@ package = rust
 
 headers = rust.h
 
+# Path to the rust.h header file
 compilerOpts = -I ../../rust
-linkerOpts = -L ../rust/target/debug -l rust
+
+linkerOpts.ios_arm64 = -L ../rust/target/aarch64-apple-ios/debug -l rust
+linkerOpts.ios_simulator_arm64 = -L ../rust/target/aarch64-apple-ios/debug -l rust
+linkerOpts.ios_x64 = -L ../rust/target/x86_64-apple-ios/debug -l rust
+
+linkerOpts.android_arm64 = -L ../rust/target/aarch64-linux-android/debug -l rust
+linkerOpts.android_arm32 = -L ../rust/target/armv7-linux-androideabi/debug -l rust
