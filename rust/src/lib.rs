@@ -1,8 +1,6 @@
-
-#[unsafe(export_name = "add_numbers")]
 #[unsafe(no_mangle)]
 pub extern "C"
-fn add(left: i32, right: i32) -> i32 {
+fn add_numbers(left: i32, right: i32) -> i32 {
     left + right
 }
 
@@ -12,7 +10,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
+        let result = add_numbers(2, 2);
         assert_eq!(result, 4);
     }
 
