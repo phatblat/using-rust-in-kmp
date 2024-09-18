@@ -67,5 +67,15 @@ android {
     }
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
+        ndk {}
+    }
+
+    ndkVersion = "27.1.12297006"
+
+    externalNativeBuild {
+        cmake {
+            version = "3.30.3"
+            path = file("CMakeLists.txt")
+        }
     }
 }
