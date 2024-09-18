@@ -8,8 +8,3 @@ class AndroidNativePlatform : Platform {
 }
 
 actual fun getPlatform(): Platform = AndroidNativePlatform()
-
-@OptIn(ExperimentalForeignApi::class)
-fun add(a: Int, b: Int) {
-    add_numbers(a, b)
-}
