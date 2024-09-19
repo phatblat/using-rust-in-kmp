@@ -1,6 +1,7 @@
 import com.android.build.gradle.internal.tasks.factory.dependsOn
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.konan.file.File.Companion.javaHome
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -26,6 +27,18 @@ kotlin {
         target.binaries {
             sharedLib {
                 baseName = "shared"
+            }
+        }
+        target.compilations.named("main") {
+            cinterops {
+                val jni by creating {
+                    val ndkPath = "/Users/phatblat/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr"
+
+                    includeDirs(
+                        Callable { File(ndkPath, "include") },
+                        Callable { File(ndkPath, "include/android") },
+                    )
+                }
             }
         }
     }
@@ -74,13 +87,6 @@ android {
     }
 
     ndkVersion = "27.1.12297006"
-
-//    externalNativeBuild {
-//        cmake {
-//            version = "3.30.3"
-//            path = file("CMakeLists.txt")
-//        }
-//    }
 }
 
 val copyNativeLibs = tasks.register<Copy>("copyNativeLibs") {
@@ -91,12 +97,6 @@ val copyNativeLibs = tasks.register<Copy>("copyNativeLibs") {
 //    val assemble by getting
 val linkDebugSharedAndroidNativeArm64 by tasks.getting
 copyNativeLibs.dependsOn(linkDebugSharedAndroidNativeArm64)
-
-//    assemble.dependsOn(copyNativeLibs)
-
-//    linkReleaseSharedAndroidNativeArm64
-//    linkReleaseSharedAndroidNativeX64
-//    linkReleaseSharedAndroidNativeX86
 
 afterEvaluate {
     val mergeDebugJniLibFolders by tasks.getting
