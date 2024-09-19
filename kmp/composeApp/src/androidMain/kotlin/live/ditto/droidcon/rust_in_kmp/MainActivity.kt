@@ -9,7 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 class MainActivity : ComponentActivity() {
     companion object {
         init {
-            System.loadLibrary("rust")
+            System.loadLibrary("shared")
         }
     }
 
