@@ -1,11 +1,11 @@
-targets := "aarch64-apple-ios aarch64-apple-ios-sim aarch64-linux-android armv7-linux-androideabi"
+targets := "aarch64-apple-ios aarch64-apple-ios-sim x86_64-apple-ios aarch64-linux-android armv7-linux-androideabi x86_64-linux-android i686-linux-android"
 
 default:
     @just --list
 
 install-targets:
     for target in {{targets}}; do \
-        rustup target add {{targets}}; \
+        rustup target add $target; \
     done
 
 clean:
