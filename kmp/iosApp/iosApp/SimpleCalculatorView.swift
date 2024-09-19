@@ -19,9 +19,11 @@ struct SimpleCalculatorView: View {
                 .padding(.horizontal)
 
             Button("Calculate") {
-                let n1 = Int(num1) ?? 0
-                let n2 = Int(num2) ?? 0
-                result = String(n1 + n2)
+                let n1 = Int32(num1) ?? 0
+                let n2 = Int32(num2) ?? 0
+                // Invoke Calc.ios's add function
+                let sum = Calc_iosKt.add(a: n1, b: n2)
+                result = String(sum)
             }
             .padding(.horizontal)
 
