@@ -11,6 +11,7 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		F81634B52C9BAC5F00D201BC /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81634482C9BAC4D00D201BC /* librust.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,87 @@
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F81634312C9BA7F200D201BC /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librust.a; path = "../../rust/target/aarch64-apple-ios/debug/librust.a"; sourceTree = "<group>"; };
+		F81634332C9BAC4D00D201BC /* dep-lib-rust */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dep-lib-rust"; sourceTree = "<group>"; };
+		F81634342C9BAC4D00D201BC /* invoked.timestamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = invoked.timestamp; sourceTree = "<group>"; };
+		F81634352C9BAC4D00D201BC /* lib-rust */ = {isa = PBXFileReference; lastKnownFileType = text; path = "lib-rust"; sourceTree = "<group>"; };
+		F81634362C9BAC4D00D201BC /* lib-rust.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lib-rust.json"; sourceTree = "<group>"; };
+		F816343A2C9BAC4D00D201BC /* librust-6ac3942893d4c5d8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "librust-6ac3942893d4c5d8.a"; sourceTree = "<group>"; };
+		F816343B2C9BAC4D00D201BC /* rust-6ac3942893d4c5d8.cgqbp2u1x5tv8mfvtm6g7pgi0.rcgu.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = "rust-6ac3942893d4c5d8.cgqbp2u1x5tv8mfvtm6g7pgi0.rcgu.o"; sourceTree = "<group>"; };
+		F816343C2C9BAC4D00D201BC /* rust-6ac3942893d4c5d8.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "rust-6ac3942893d4c5d8.d"; sourceTree = "<group>"; };
+		F816343F2C9BAC4D00D201BC /* cgqbp2u1x5tv8mfvtm6g7pgi0.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = cgqbp2u1x5tv8mfvtm6g7pgi0.o; sourceTree = "<group>"; };
+		F81634402C9BAC4D00D201BC /* dep-graph.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "dep-graph.bin"; sourceTree = "<group>"; };
+		F81634412C9BAC4D00D201BC /* query-cache.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "query-cache.bin"; sourceTree = "<group>"; };
+		F81634422C9BAC4D00D201BC /* work-products.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "work-products.bin"; sourceTree = "<group>"; };
+		F81634442C9BAC4D00D201BC /* s-h02dn24vtf-1ghxgla.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s-h02dn24vtf-1ghxgla.lock"; sourceTree = "<group>"; };
+		F81634472C9BAC4D00D201BC /* .cargo-lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".cargo-lock"; sourceTree = "<group>"; };
+		F81634482C9BAC4D00D201BC /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librust.a; sourceTree = "<group>"; };
+		F81634492C9BAC4D00D201BC /* librust.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = librust.d; sourceTree = "<group>"; };
+		F816344B2C9BAC4D00D201BC /* CACHEDIR.TAG */ = {isa = PBXFileReference; lastKnownFileType = text; path = CACHEDIR.TAG; sourceTree = "<group>"; };
+		F816344D2C9BAC4D00D201BC /* dep-lib-rust */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dep-lib-rust"; sourceTree = "<group>"; };
+		F816344E2C9BAC4D00D201BC /* invoked.timestamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = invoked.timestamp; sourceTree = "<group>"; };
+		F816344F2C9BAC4D00D201BC /* lib-rust */ = {isa = PBXFileReference; lastKnownFileType = text; path = "lib-rust"; sourceTree = "<group>"; };
+		F81634502C9BAC4D00D201BC /* lib-rust.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lib-rust.json"; sourceTree = "<group>"; };
+		F81634542C9BAC4D00D201BC /* librust-b3f3809f15bb1dbd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "librust-b3f3809f15bb1dbd.a"; sourceTree = "<group>"; };
+		F81634552C9BAC4D00D201BC /* rust-b3f3809f15bb1dbd.8sutwlu5sycwm8d6rdmu5ysbj.rcgu.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = "rust-b3f3809f15bb1dbd.8sutwlu5sycwm8d6rdmu5ysbj.rcgu.o"; sourceTree = "<group>"; };
+		F81634562C9BAC4D00D201BC /* rust-b3f3809f15bb1dbd.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "rust-b3f3809f15bb1dbd.d"; sourceTree = "<group>"; };
+		F81634592C9BAC4D00D201BC /* 8sutwlu5sycwm8d6rdmu5ysbj.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = 8sutwlu5sycwm8d6rdmu5ysbj.o; sourceTree = "<group>"; };
+		F816345A2C9BAC4D00D201BC /* dep-graph.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "dep-graph.bin"; sourceTree = "<group>"; };
+		F816345B2C9BAC4D00D201BC /* query-cache.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "query-cache.bin"; sourceTree = "<group>"; };
+		F816345C2C9BAC4D00D201BC /* work-products.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "work-products.bin"; sourceTree = "<group>"; };
+		F816345E2C9BAC4D00D201BC /* s-h02dn29u2c-0m062rd.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s-h02dn29u2c-0m062rd.lock"; sourceTree = "<group>"; };
+		F81634612C9BAC4D00D201BC /* .cargo-lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".cargo-lock"; sourceTree = "<group>"; };
+		F81634622C9BAC4D00D201BC /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librust.a; sourceTree = "<group>"; };
+		F81634632C9BAC4D00D201BC /* librust.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = librust.d; sourceTree = "<group>"; };
+		F81634652C9BAC4D00D201BC /* CACHEDIR.TAG */ = {isa = PBXFileReference; lastKnownFileType = text; path = CACHEDIR.TAG; sourceTree = "<group>"; };
+		F81634672C9BAC4D00D201BC /* dep-lib-rust */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dep-lib-rust"; sourceTree = "<group>"; };
+		F81634682C9BAC4D00D201BC /* invoked.timestamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = invoked.timestamp; sourceTree = "<group>"; };
+		F81634692C9BAC4D00D201BC /* lib-rust */ = {isa = PBXFileReference; lastKnownFileType = text; path = "lib-rust"; sourceTree = "<group>"; };
+		F816346A2C9BAC4D00D201BC /* lib-rust.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lib-rust.json"; sourceTree = "<group>"; };
+		F816346E2C9BAC4D00D201BC /* librust-2ca08eb7b219bb7c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "librust-2ca08eb7b219bb7c.a"; sourceTree = "<group>"; };
+		F816346F2C9BAC4D00D201BC /* rust-2ca08eb7b219bb7c.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "rust-2ca08eb7b219bb7c.d"; sourceTree = "<group>"; };
+		F81634722C9BAC4D00D201BC /* dep-graph.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "dep-graph.bin"; sourceTree = "<group>"; };
+		F81634732C9BAC4D00D201BC /* e8x0t20qf1v11l6k0cu8d8z1a.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = e8x0t20qf1v11l6k0cu8d8z1a.o; sourceTree = "<group>"; };
+		F81634742C9BAC4D00D201BC /* query-cache.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "query-cache.bin"; sourceTree = "<group>"; };
+		F81634752C9BAC4D00D201BC /* work-products.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "work-products.bin"; sourceTree = "<group>"; };
+		F81634772C9BAC4D00D201BC /* s-h02dn2ct4f-18vw9bu.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s-h02dn2ct4f-18vw9bu.lock"; sourceTree = "<group>"; };
+		F816347A2C9BAC4D00D201BC /* .cargo-lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".cargo-lock"; sourceTree = "<group>"; };
+		F816347B2C9BAC4D00D201BC /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librust.a; sourceTree = "<group>"; };
+		F816347C2C9BAC4D00D201BC /* librust.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = librust.d; sourceTree = "<group>"; };
+		F816347E2C9BAC4D00D201BC /* CACHEDIR.TAG */ = {isa = PBXFileReference; lastKnownFileType = text; path = CACHEDIR.TAG; sourceTree = "<group>"; };
+		F81634802C9BAC4D00D201BC /* dep-lib-rust */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dep-lib-rust"; sourceTree = "<group>"; };
+		F81634812C9BAC4D00D201BC /* invoked.timestamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = invoked.timestamp; sourceTree = "<group>"; };
+		F81634822C9BAC4D00D201BC /* lib-rust */ = {isa = PBXFileReference; lastKnownFileType = text; path = "lib-rust"; sourceTree = "<group>"; };
+		F81634832C9BAC4D00D201BC /* lib-rust.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lib-rust.json"; sourceTree = "<group>"; };
+		F81634872C9BAC4D00D201BC /* librust-aab57fde0880e50d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "librust-aab57fde0880e50d.a"; sourceTree = "<group>"; };
+		F81634882C9BAC4D00D201BC /* rust-aab57fde0880e50d.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "rust-aab57fde0880e50d.d"; sourceTree = "<group>"; };
+		F816348B2C9BAC4D00D201BC /* 6yw9a26lttm3g9nlmraf0vwo3.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = 6yw9a26lttm3g9nlmraf0vwo3.o; sourceTree = "<group>"; };
+		F816348C2C9BAC4D00D201BC /* dep-graph.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "dep-graph.bin"; sourceTree = "<group>"; };
+		F816348D2C9BAC4D00D201BC /* query-cache.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "query-cache.bin"; sourceTree = "<group>"; };
+		F816348E2C9BAC4D00D201BC /* work-products.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "work-products.bin"; sourceTree = "<group>"; };
+		F81634902C9BAC4D00D201BC /* s-h02dn2fzxj-142upnf.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s-h02dn2fzxj-142upnf.lock"; sourceTree = "<group>"; };
+		F81634932C9BAC4D00D201BC /* .cargo-lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".cargo-lock"; sourceTree = "<group>"; };
+		F81634942C9BAC4D00D201BC /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librust.a; sourceTree = "<group>"; };
+		F81634952C9BAC4D00D201BC /* librust.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = librust.d; sourceTree = "<group>"; };
+		F81634972C9BAC4D00D201BC /* CACHEDIR.TAG */ = {isa = PBXFileReference; lastKnownFileType = text; path = CACHEDIR.TAG; sourceTree = "<group>"; };
+		F81634992C9BAC4D00D201BC /* dep-lib-rust */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dep-lib-rust"; sourceTree = "<group>"; };
+		F816349A2C9BAC4D00D201BC /* invoked.timestamp */ = {isa = PBXFileReference; lastKnownFileType = text; path = invoked.timestamp; sourceTree = "<group>"; };
+		F816349B2C9BAC4D00D201BC /* lib-rust */ = {isa = PBXFileReference; lastKnownFileType = text; path = "lib-rust"; sourceTree = "<group>"; };
+		F816349C2C9BAC4D00D201BC /* lib-rust.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "lib-rust.json"; sourceTree = "<group>"; };
+		F816349D2C9BAC4D00D201BC /* output-lib-rust */ = {isa = PBXFileReference; lastKnownFileType = text; path = "output-lib-rust"; sourceTree = "<group>"; };
+		F81634A12C9BAC4D00D201BC /* librust-8f802b3178c58a6a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "librust-8f802b3178c58a6a.a"; sourceTree = "<group>"; };
+		F81634A22C9BAC4D00D201BC /* rust-8f802b3178c58a6a.b6ej8jgnay1igtlqy48joipct.rcgu.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = "rust-8f802b3178c58a6a.b6ej8jgnay1igtlqy48joipct.rcgu.o"; sourceTree = "<group>"; };
+		F81634A32C9BAC4D00D201BC /* rust-8f802b3178c58a6a.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = "rust-8f802b3178c58a6a.d"; sourceTree = "<group>"; };
+		F81634A62C9BAC4D00D201BC /* b6ej8jgnay1igtlqy48joipct.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = b6ej8jgnay1igtlqy48joipct.o; sourceTree = "<group>"; };
+		F81634A72C9BAC4D00D201BC /* dep-graph.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "dep-graph.bin"; sourceTree = "<group>"; };
+		F81634A82C9BAC4D00D201BC /* query-cache.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "query-cache.bin"; sourceTree = "<group>"; };
+		F81634A92C9BAC4D00D201BC /* work-products.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "work-products.bin"; sourceTree = "<group>"; };
+		F81634AB2C9BAC4D00D201BC /* s-h02dm91zmb-1llg8ye.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s-h02dm91zmb-1llg8ye.lock"; sourceTree = "<group>"; };
+		F81634AE2C9BAC4D00D201BC /* .cargo-lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".cargo-lock"; sourceTree = "<group>"; };
+		F81634AF2C9BAC4D00D201BC /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librust.a; sourceTree = "<group>"; };
+		F81634B02C9BAC4D00D201BC /* librust.d */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.dtrace; path = librust.d; sourceTree = "<group>"; };
+		F81634B22C9BAC4D00D201BC /* .rustc_info.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = .rustc_info.json; sourceTree = "<group>"; };
+		F81634B32C9BAC4D00D201BC /* CACHEDIR.TAG */ = {isa = PBXFileReference; lastKnownFileType = text; path = CACHEDIR.TAG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81634B52C9BAC5F00D201BC /* librust.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +128,8 @@
 		42799AB246E5F90AF97AA0EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F81634B42C9BAC4D00D201BC /* target */,
+				F81634312C9BA7F200D201BC /* librust.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,6 +170,486 @@
 				AB3632DC29227652001CCB65 /* Config.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		F81634372C9BAC4D00D201BC /* rust-6ac3942893d4c5d8 */ = {
+			isa = PBXGroup;
+			children = (
+				F81634332C9BAC4D00D201BC /* dep-lib-rust */,
+				F81634342C9BAC4D00D201BC /* invoked.timestamp */,
+				F81634352C9BAC4D00D201BC /* lib-rust */,
+				F81634362C9BAC4D00D201BC /* lib-rust.json */,
+			);
+			path = "rust-6ac3942893d4c5d8";
+			sourceTree = "<group>";
+		};
+		F81634382C9BAC4D00D201BC /* .fingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				F81634372C9BAC4D00D201BC /* rust-6ac3942893d4c5d8 */,
+			);
+			path = .fingerprint;
+			sourceTree = "<group>";
+		};
+		F81634392C9BAC4D00D201BC /* build */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F816343D2C9BAC4D00D201BC /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				F816343A2C9BAC4D00D201BC /* librust-6ac3942893d4c5d8.a */,
+				F816343B2C9BAC4D00D201BC /* rust-6ac3942893d4c5d8.cgqbp2u1x5tv8mfvtm6g7pgi0.rcgu.o */,
+				F816343C2C9BAC4D00D201BC /* rust-6ac3942893d4c5d8.d */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		F816343E2C9BAC4D00D201BC /* examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		F81634432C9BAC4D00D201BC /* s-h02dn24vtf-1ghxgla-69e0smd2rsyoe9i07j90sgsw8 */ = {
+			isa = PBXGroup;
+			children = (
+				F816343F2C9BAC4D00D201BC /* cgqbp2u1x5tv8mfvtm6g7pgi0.o */,
+				F81634402C9BAC4D00D201BC /* dep-graph.bin */,
+				F81634412C9BAC4D00D201BC /* query-cache.bin */,
+				F81634422C9BAC4D00D201BC /* work-products.bin */,
+			);
+			path = "s-h02dn24vtf-1ghxgla-69e0smd2rsyoe9i07j90sgsw8";
+			sourceTree = "<group>";
+		};
+		F81634452C9BAC4D00D201BC /* rust-1o1qjrzsunzy0 */ = {
+			isa = PBXGroup;
+			children = (
+				F81634432C9BAC4D00D201BC /* s-h02dn24vtf-1ghxgla-69e0smd2rsyoe9i07j90sgsw8 */,
+				F81634442C9BAC4D00D201BC /* s-h02dn24vtf-1ghxgla.lock */,
+			);
+			path = "rust-1o1qjrzsunzy0";
+			sourceTree = "<group>";
+		};
+		F81634462C9BAC4D00D201BC /* incremental */ = {
+			isa = PBXGroup;
+			children = (
+				F81634452C9BAC4D00D201BC /* rust-1o1qjrzsunzy0 */,
+			);
+			path = incremental;
+			sourceTree = "<group>";
+		};
+		F816344A2C9BAC4D00D201BC /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F81634382C9BAC4D00D201BC /* .fingerprint */,
+				F81634392C9BAC4D00D201BC /* build */,
+				F816343D2C9BAC4D00D201BC /* deps */,
+				F816343E2C9BAC4D00D201BC /* examples */,
+				F81634462C9BAC4D00D201BC /* incremental */,
+				F81634472C9BAC4D00D201BC /* .cargo-lock */,
+				F81634482C9BAC4D00D201BC /* librust.a */,
+				F81634492C9BAC4D00D201BC /* librust.d */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F816344C2C9BAC4D00D201BC /* aarch64-apple-ios */ = {
+			isa = PBXGroup;
+			children = (
+				F816344A2C9BAC4D00D201BC /* debug */,
+				F816344B2C9BAC4D00D201BC /* CACHEDIR.TAG */,
+			);
+			path = "aarch64-apple-ios";
+			sourceTree = "<group>";
+		};
+		F81634512C9BAC4D00D201BC /* rust-b3f3809f15bb1dbd */ = {
+			isa = PBXGroup;
+			children = (
+				F816344D2C9BAC4D00D201BC /* dep-lib-rust */,
+				F816344E2C9BAC4D00D201BC /* invoked.timestamp */,
+				F816344F2C9BAC4D00D201BC /* lib-rust */,
+				F81634502C9BAC4D00D201BC /* lib-rust.json */,
+			);
+			path = "rust-b3f3809f15bb1dbd";
+			sourceTree = "<group>";
+		};
+		F81634522C9BAC4D00D201BC /* .fingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				F81634512C9BAC4D00D201BC /* rust-b3f3809f15bb1dbd */,
+			);
+			path = .fingerprint;
+			sourceTree = "<group>";
+		};
+		F81634532C9BAC4D00D201BC /* build */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F81634572C9BAC4D00D201BC /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				F81634542C9BAC4D00D201BC /* librust-b3f3809f15bb1dbd.a */,
+				F81634552C9BAC4D00D201BC /* rust-b3f3809f15bb1dbd.8sutwlu5sycwm8d6rdmu5ysbj.rcgu.o */,
+				F81634562C9BAC4D00D201BC /* rust-b3f3809f15bb1dbd.d */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		F81634582C9BAC4D00D201BC /* examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		F816345D2C9BAC4D00D201BC /* s-h02dn29u2c-0m062rd-1ga9b2es032oc5qarc0m33iaj */ = {
+			isa = PBXGroup;
+			children = (
+				F81634592C9BAC4D00D201BC /* 8sutwlu5sycwm8d6rdmu5ysbj.o */,
+				F816345A2C9BAC4D00D201BC /* dep-graph.bin */,
+				F816345B2C9BAC4D00D201BC /* query-cache.bin */,
+				F816345C2C9BAC4D00D201BC /* work-products.bin */,
+			);
+			path = "s-h02dn29u2c-0m062rd-1ga9b2es032oc5qarc0m33iaj";
+			sourceTree = "<group>";
+		};
+		F816345F2C9BAC4D00D201BC /* rust-0msen0ht7boef */ = {
+			isa = PBXGroup;
+			children = (
+				F816345D2C9BAC4D00D201BC /* s-h02dn29u2c-0m062rd-1ga9b2es032oc5qarc0m33iaj */,
+				F816345E2C9BAC4D00D201BC /* s-h02dn29u2c-0m062rd.lock */,
+			);
+			path = "rust-0msen0ht7boef";
+			sourceTree = "<group>";
+		};
+		F81634602C9BAC4D00D201BC /* incremental */ = {
+			isa = PBXGroup;
+			children = (
+				F816345F2C9BAC4D00D201BC /* rust-0msen0ht7boef */,
+			);
+			path = incremental;
+			sourceTree = "<group>";
+		};
+		F81634642C9BAC4D00D201BC /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F81634522C9BAC4D00D201BC /* .fingerprint */,
+				F81634532C9BAC4D00D201BC /* build */,
+				F81634572C9BAC4D00D201BC /* deps */,
+				F81634582C9BAC4D00D201BC /* examples */,
+				F81634602C9BAC4D00D201BC /* incremental */,
+				F81634612C9BAC4D00D201BC /* .cargo-lock */,
+				F81634622C9BAC4D00D201BC /* librust.a */,
+				F81634632C9BAC4D00D201BC /* librust.d */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F81634662C9BAC4D00D201BC /* aarch64-apple-ios-sim */ = {
+			isa = PBXGroup;
+			children = (
+				F81634642C9BAC4D00D201BC /* debug */,
+				F81634652C9BAC4D00D201BC /* CACHEDIR.TAG */,
+			);
+			path = "aarch64-apple-ios-sim";
+			sourceTree = "<group>";
+		};
+		F816346B2C9BAC4D00D201BC /* rust-2ca08eb7b219bb7c */ = {
+			isa = PBXGroup;
+			children = (
+				F81634672C9BAC4D00D201BC /* dep-lib-rust */,
+				F81634682C9BAC4D00D201BC /* invoked.timestamp */,
+				F81634692C9BAC4D00D201BC /* lib-rust */,
+				F816346A2C9BAC4D00D201BC /* lib-rust.json */,
+			);
+			path = "rust-2ca08eb7b219bb7c";
+			sourceTree = "<group>";
+		};
+		F816346C2C9BAC4D00D201BC /* .fingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				F816346B2C9BAC4D00D201BC /* rust-2ca08eb7b219bb7c */,
+			);
+			path = .fingerprint;
+			sourceTree = "<group>";
+		};
+		F816346D2C9BAC4D00D201BC /* build */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F81634702C9BAC4D00D201BC /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				F816346E2C9BAC4D00D201BC /* librust-2ca08eb7b219bb7c.a */,
+				F816346F2C9BAC4D00D201BC /* rust-2ca08eb7b219bb7c.d */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		F81634712C9BAC4D00D201BC /* examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		F81634762C9BAC4D00D201BC /* s-h02dn2ct4f-18vw9bu-dvqju151ou4bmnj6hc2osmrqv */ = {
+			isa = PBXGroup;
+			children = (
+				F81634722C9BAC4D00D201BC /* dep-graph.bin */,
+				F81634732C9BAC4D00D201BC /* e8x0t20qf1v11l6k0cu8d8z1a.o */,
+				F81634742C9BAC4D00D201BC /* query-cache.bin */,
+				F81634752C9BAC4D00D201BC /* work-products.bin */,
+			);
+			path = "s-h02dn2ct4f-18vw9bu-dvqju151ou4bmnj6hc2osmrqv";
+			sourceTree = "<group>";
+		};
+		F81634782C9BAC4D00D201BC /* rust-12w2m44dawdxt */ = {
+			isa = PBXGroup;
+			children = (
+				F81634762C9BAC4D00D201BC /* s-h02dn2ct4f-18vw9bu-dvqju151ou4bmnj6hc2osmrqv */,
+				F81634772C9BAC4D00D201BC /* s-h02dn2ct4f-18vw9bu.lock */,
+			);
+			path = "rust-12w2m44dawdxt";
+			sourceTree = "<group>";
+		};
+		F81634792C9BAC4D00D201BC /* incremental */ = {
+			isa = PBXGroup;
+			children = (
+				F81634782C9BAC4D00D201BC /* rust-12w2m44dawdxt */,
+			);
+			path = incremental;
+			sourceTree = "<group>";
+		};
+		F816347D2C9BAC4D00D201BC /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F816346C2C9BAC4D00D201BC /* .fingerprint */,
+				F816346D2C9BAC4D00D201BC /* build */,
+				F81634702C9BAC4D00D201BC /* deps */,
+				F81634712C9BAC4D00D201BC /* examples */,
+				F81634792C9BAC4D00D201BC /* incremental */,
+				F816347A2C9BAC4D00D201BC /* .cargo-lock */,
+				F816347B2C9BAC4D00D201BC /* librust.a */,
+				F816347C2C9BAC4D00D201BC /* librust.d */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F816347F2C9BAC4D00D201BC /* aarch64-linux-android */ = {
+			isa = PBXGroup;
+			children = (
+				F816347D2C9BAC4D00D201BC /* debug */,
+				F816347E2C9BAC4D00D201BC /* CACHEDIR.TAG */,
+			);
+			path = "aarch64-linux-android";
+			sourceTree = "<group>";
+		};
+		F81634842C9BAC4D00D201BC /* rust-aab57fde0880e50d */ = {
+			isa = PBXGroup;
+			children = (
+				F81634802C9BAC4D00D201BC /* dep-lib-rust */,
+				F81634812C9BAC4D00D201BC /* invoked.timestamp */,
+				F81634822C9BAC4D00D201BC /* lib-rust */,
+				F81634832C9BAC4D00D201BC /* lib-rust.json */,
+			);
+			path = "rust-aab57fde0880e50d";
+			sourceTree = "<group>";
+		};
+		F81634852C9BAC4D00D201BC /* .fingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				F81634842C9BAC4D00D201BC /* rust-aab57fde0880e50d */,
+			);
+			path = .fingerprint;
+			sourceTree = "<group>";
+		};
+		F81634862C9BAC4D00D201BC /* build */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F81634892C9BAC4D00D201BC /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				F81634872C9BAC4D00D201BC /* librust-aab57fde0880e50d.a */,
+				F81634882C9BAC4D00D201BC /* rust-aab57fde0880e50d.d */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		F816348A2C9BAC4D00D201BC /* examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		F816348F2C9BAC4D00D201BC /* s-h02dn2fzxj-142upnf-0jdj4jw12dqclkd8kejlva5pf */ = {
+			isa = PBXGroup;
+			children = (
+				F816348B2C9BAC4D00D201BC /* 6yw9a26lttm3g9nlmraf0vwo3.o */,
+				F816348C2C9BAC4D00D201BC /* dep-graph.bin */,
+				F816348D2C9BAC4D00D201BC /* query-cache.bin */,
+				F816348E2C9BAC4D00D201BC /* work-products.bin */,
+			);
+			path = "s-h02dn2fzxj-142upnf-0jdj4jw12dqclkd8kejlva5pf";
+			sourceTree = "<group>";
+		};
+		F81634912C9BAC4D00D201BC /* rust-360nvejq4s97x */ = {
+			isa = PBXGroup;
+			children = (
+				F816348F2C9BAC4D00D201BC /* s-h02dn2fzxj-142upnf-0jdj4jw12dqclkd8kejlva5pf */,
+				F81634902C9BAC4D00D201BC /* s-h02dn2fzxj-142upnf.lock */,
+			);
+			path = "rust-360nvejq4s97x";
+			sourceTree = "<group>";
+		};
+		F81634922C9BAC4D00D201BC /* incremental */ = {
+			isa = PBXGroup;
+			children = (
+				F81634912C9BAC4D00D201BC /* rust-360nvejq4s97x */,
+			);
+			path = incremental;
+			sourceTree = "<group>";
+		};
+		F81634962C9BAC4D00D201BC /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F81634852C9BAC4D00D201BC /* .fingerprint */,
+				F81634862C9BAC4D00D201BC /* build */,
+				F81634892C9BAC4D00D201BC /* deps */,
+				F816348A2C9BAC4D00D201BC /* examples */,
+				F81634922C9BAC4D00D201BC /* incremental */,
+				F81634932C9BAC4D00D201BC /* .cargo-lock */,
+				F81634942C9BAC4D00D201BC /* librust.a */,
+				F81634952C9BAC4D00D201BC /* librust.d */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F81634982C9BAC4D00D201BC /* armv7-linux-androideabi */ = {
+			isa = PBXGroup;
+			children = (
+				F81634962C9BAC4D00D201BC /* debug */,
+				F81634972C9BAC4D00D201BC /* CACHEDIR.TAG */,
+			);
+			path = "armv7-linux-androideabi";
+			sourceTree = "<group>";
+		};
+		F816349E2C9BAC4D00D201BC /* rust-8f802b3178c58a6a */ = {
+			isa = PBXGroup;
+			children = (
+				F81634992C9BAC4D00D201BC /* dep-lib-rust */,
+				F816349A2C9BAC4D00D201BC /* invoked.timestamp */,
+				F816349B2C9BAC4D00D201BC /* lib-rust */,
+				F816349C2C9BAC4D00D201BC /* lib-rust.json */,
+				F816349D2C9BAC4D00D201BC /* output-lib-rust */,
+			);
+			path = "rust-8f802b3178c58a6a";
+			sourceTree = "<group>";
+		};
+		F816349F2C9BAC4D00D201BC /* .fingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				F816349E2C9BAC4D00D201BC /* rust-8f802b3178c58a6a */,
+			);
+			path = .fingerprint;
+			sourceTree = "<group>";
+		};
+		F81634A02C9BAC4D00D201BC /* build */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F81634A42C9BAC4D00D201BC /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				F81634A12C9BAC4D00D201BC /* librust-8f802b3178c58a6a.a */,
+				F81634A22C9BAC4D00D201BC /* rust-8f802b3178c58a6a.b6ej8jgnay1igtlqy48joipct.rcgu.o */,
+				F81634A32C9BAC4D00D201BC /* rust-8f802b3178c58a6a.d */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		F81634A52C9BAC4D00D201BC /* examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		F81634AA2C9BAC4D00D201BC /* s-h02dm91zmb-1llg8ye-ed6lff95fjb23umbdx3727y82 */ = {
+			isa = PBXGroup;
+			children = (
+				F81634A62C9BAC4D00D201BC /* b6ej8jgnay1igtlqy48joipct.o */,
+				F81634A72C9BAC4D00D201BC /* dep-graph.bin */,
+				F81634A82C9BAC4D00D201BC /* query-cache.bin */,
+				F81634A92C9BAC4D00D201BC /* work-products.bin */,
+			);
+			path = "s-h02dm91zmb-1llg8ye-ed6lff95fjb23umbdx3727y82";
+			sourceTree = "<group>";
+		};
+		F81634AC2C9BAC4D00D201BC /* rust-2t04ucqhkrpyn */ = {
+			isa = PBXGroup;
+			children = (
+				F81634AA2C9BAC4D00D201BC /* s-h02dm91zmb-1llg8ye-ed6lff95fjb23umbdx3727y82 */,
+				F81634AB2C9BAC4D00D201BC /* s-h02dm91zmb-1llg8ye.lock */,
+			);
+			path = "rust-2t04ucqhkrpyn";
+			sourceTree = "<group>";
+		};
+		F81634AD2C9BAC4D00D201BC /* incremental */ = {
+			isa = PBXGroup;
+			children = (
+				F81634AC2C9BAC4D00D201BC /* rust-2t04ucqhkrpyn */,
+			);
+			path = incremental;
+			sourceTree = "<group>";
+		};
+		F81634B12C9BAC4D00D201BC /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F816349F2C9BAC4D00D201BC /* .fingerprint */,
+				F81634A02C9BAC4D00D201BC /* build */,
+				F81634A42C9BAC4D00D201BC /* deps */,
+				F81634A52C9BAC4D00D201BC /* examples */,
+				F81634AD2C9BAC4D00D201BC /* incremental */,
+				F81634AE2C9BAC4D00D201BC /* .cargo-lock */,
+				F81634AF2C9BAC4D00D201BC /* librust.a */,
+				F81634B02C9BAC4D00D201BC /* librust.d */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F81634B42C9BAC4D00D201BC /* target */ = {
+			isa = PBXGroup;
+			children = (
+				F816344C2C9BAC4D00D201BC /* aarch64-apple-ios */,
+				F81634662C9BAC4D00D201BC /* aarch64-apple-ios-sim */,
+				F816347F2C9BAC4D00D201BC /* aarch64-linux-android */,
+				F81634982C9BAC4D00D201BC /* armv7-linux-androideabi */,
+				F81634B12C9BAC4D00D201BC /* debug */,
+				F81634B22C9BAC4D00D201BC /* .rustc_info.json */,
+				F81634B32C9BAC4D00D201BC /* CACHEDIR.TAG */,
+			);
+			name = target;
+			path = ../../rust/target;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +896,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../rust/target/aarch64-apple-ios-sim/debug";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -363,6 +929,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../rust/target/aarch64-apple-ios-sim/debug";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
