@@ -6,6 +6,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button("Click me!") {
+                add()
                 withAnimation {
                     showContent = !showContent
                 }
@@ -26,7 +27,8 @@ struct ContentView: View {
     }
 
     func add() {
-        Calc_iosKt.add(a: 1, b: 2)
+        let sum = Calc_iosKt.add(a: 1, b: 2)
+        print("sum: \(sum)")
     }
 }
 
