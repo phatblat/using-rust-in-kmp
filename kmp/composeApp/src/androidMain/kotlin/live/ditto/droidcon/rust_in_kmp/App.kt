@@ -57,7 +57,8 @@ fun App() {
             Button(onClick = {
                 val n1 = num1.toIntOrNull() ?: 0
                 val n2 = num2.toIntOrNull() ?: 0
-                result = (n1 + n2).toString()
+                // Invoke Calc.android's add function
+                result = add(n1, n2).toString()
             }) {
                 Text("Calculate")
             }
