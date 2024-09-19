@@ -1,3 +1,4 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -18,8 +19,8 @@ kotlin {
         androidNativeArm64(),   // arm64-v8a
         // arm32 fails with linker errors
 //        androidNativeArm32(),   // armeabi-v7a
-//        androidNativeX64(),     // x86_64
-//        androidNativeX86(),     // x86 32-bit
+        androidNativeX64(),     // x86_64
+        androidNativeX86(),     // x86 32-bit
     )
     androidNativeTargets.forEach { target ->
         target.binaries {
@@ -74,10 +75,32 @@ android {
 
     ndkVersion = "27.1.12297006"
 
-    externalNativeBuild {
-        cmake {
-            version = "3.30.3"
-            path = file("CMakeLists.txt")
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+//            version = "3.30.3"
+//            path = file("CMakeLists.txt")
+//        }
+//    }
+}
+
+val copyNativeLibs = tasks.register<Copy>("copyNativeLibs") {
+    from(layout.buildDirectory.dir("bin/androidNativeArm64/debugShared/libshared.so"))
+    into(layout.projectDirectory.dir("src/androidMain/jniLibs/arm64-v8a"))
+}
+
+//    val assemble by getting
+val linkDebugSharedAndroidNativeArm64 by tasks.getting
+copyNativeLibs.dependsOn(linkDebugSharedAndroidNativeArm64)
+
+//    assemble.dependsOn(copyNativeLibs)
+
+//    linkReleaseSharedAndroidNativeArm64
+//    linkReleaseSharedAndroidNativeX64
+//    linkReleaseSharedAndroidNativeX86
+
+afterEvaluate {
+    val mergeDebugJniLibFolders by tasks.getting
+    mergeDebugJniLibFolders.dependsOn(copyNativeLibs)
+    val mergeReleaseJniLibFolders by tasks.getting
+    mergeReleaseJniLibFolders.dependsOn(copyNativeLibs)
 }
