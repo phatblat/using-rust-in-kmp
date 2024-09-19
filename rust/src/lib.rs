@@ -3,6 +3,9 @@
 #[unsafe(no_mangle)]
 pub extern "C"
 fn add_numbers(left: i32, right: i32) -> i32 {
+    if cfg!(all(target_arch = "aarch64")) {
+        unsafe { ::core::arch::asm!("brk #0"); }
+    }
     left + right
 }
 
