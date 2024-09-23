@@ -1,6 +1,4 @@
-#![feature(unsafe_attributes)]
-
-#[unsafe(no_mangle)]
+#[no_mangle]
 pub extern "C"
 fn add_numbers(left: i32, right: i32) -> i32 {
     left + right
