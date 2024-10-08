@@ -2,7 +2,7 @@
 
 # Using Rust in Kotlin Multiplatform
 
-A sample project that shows how to use Rust in a Kotlin Multiplatform.
+A sample project that shows how to use Rust in a Kotlin Multiplatform app.
 
 ## 📄 License
 
